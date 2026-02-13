@@ -4,41 +4,51 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-blue-600/10 to-transparent z-0" />
-            <div className="container mx-auto px-4 z-10 text-center">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                >
-                    <span className="inline-block py-1 px-3 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
-                        #1 Sosyal Medya Çözüm Ortağınız
-                    </span>
-                    <h1 className="text-6xl md:text-8xl font-black mb-8 leading-tight tracking-tighter">
-                        Vizyonunuzu <br />
-                        <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-                            Sanata Dönüştürün
-                        </span>
-                    </h1>
-                    <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                        Profesyonel fotoğrafçılık, video prodüksiyon ve stratejik sosyal medya yönetimi ile markanızın hikayesini en etkileyici şekilde anlatıyoruz.
-                    </p>
-                    <div className="flex flex-col md:flex-row gap-4 justify-center">
-                        <button className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-bold transition-all flex items-center justify-center gap-2 group">
-                            Projeleri İncele
-                            <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                        </button>
-                        <button className="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full font-bold transition-all">
-                            Bizimle Tanışın
-                        </button>
+        <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-black pt-32 pb-20">
+            <div className="container mx-auto px-12 z-10">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="max-w-4xl"
+                    >
+                        {/* Red Bar */}
+                        <div className="w-14 h-[4px] bg-primary mb-16"></div>
+
+                        {/* Heading - Resized to be smaller as requested */}
+                        <h1 className="text-4xl md:text-7xl font-bold mb-10 leading-[1.1] text-white tracking-tight">
+                            Strateji, <br />
+                            Yaratıcılık ve <br />
+                            Dijital Performans.
+                        </h1>
+
+                        {/* Subheading */}
+                        <p className="text-gray-500 text-lg md:text-xl mb-12 max-w-xl leading-relaxed">
+                            Markanızı dijital dünyada güçlendiren modern çözümler.
+                        </p>
+
+                        {/* Button */}
+                        <div className="flex justify-start">
+                            <button className="px-12 py-5 bg-[#A91D1D] hover:bg-red-800 text-white rounded-none font-bold transition-all uppercase tracking-[0.2em] text-[11px] shadow-2xl">
+                                Bize Ulaşın
+                            </button>
+                        </div>
+                    </motion.div>
+
+                    {/* Decorative Circular Line Art - More subtle opacity */}
+                    <div className="hidden lg:block absolute right-[-5%] top-1/2 -translate-y-1/2 w-[900px] h-[900px] pointer-events-none opacity-[0.12]">
+                        <div className="absolute inset-0 border-[0.5px] border-primary rounded-full"></div>
+                        <div className="absolute inset-[15%] border-[0.5px] border-primary rounded-full"></div>
+                        <div className="absolute inset-[30%] border-[0.5px] border-primary rounded-full"></div>
+                        <div className="absolute inset-[45%] border-[0.5px] border-primary rounded-full"></div>
+                        <div className="absolute inset-[60%] border-[0.5px] border-primary rounded-full"></div>
                     </div>
-                </motion.div>
+                </div>
             </div>
 
-            {/* Decorative Elements */}
-            <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-500/10 blur-[100px] rounded-full" />
-            <div className="absolute -top-24 -right-24 w-96 h-96 bg-emerald-500/10 blur-[100px] rounded-full" />
+            {/* Subtle light effect on the right */}
+            <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none"></div>
         </section>
     );
 };

@@ -1,47 +1,32 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const About = () => {
     return (
-        <section id="about" className="py-24">
-            <div className="container mx-auto px-4">
-                <div className="flex flex-col lg:flex-row items-center gap-16">
-                    <div className="lg:w-1/2">
-                        <motion.div
-                            initial={{ opacity: 0, x: -50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="relative"
-                        >
-                            <div className="w-full h-[500px] rounded-3xl bg-gradient-to-br from-blue-600 to-emerald-600 opacity-20 absolute -top-4 -left-4" />
-                            <div className="w-full h-[500px] rounded-3xl overflow-hidden border border-white/10 relative z-10 bg-white/5 flex items-center justify-center text-gray-500">
-                                {/* Buraya bir kurumsal görsel gelecek */}
-                                <span className="text-2xl italic font-serif">Yaratıcılığın Merkezi</span>
-                            </div>
-                        </motion.div>
-                    </div>
+        <section id="about" className="py-32 md:pt-48 md:pb-0 bg-white overflow-hidden">
+            <div className="container mx-auto px-8 max-w-6xl">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="flex flex-col items-center text-center"
+                >
+                    {/* Tiny Red Header */}
+                    <span className="text-[#A91D1D] text-[11px] font-black uppercase tracking-[0.4em] mb-12">
+                        BİZ KİMİZ?
+                    </span>
 
-                    <div className="lg:w-1/2">
-                        <h2 className="text-4xl font-bold mb-8">Hikayenizi Birlikte Yazalım</h2>
-                        <p className="text-gray-400 text-lg mb-6 leading-relaxed">
-                            Biz, görselliğin gücüne inanan, her markanın kendine has bir ruhu olduğunu düşünen yaratıcı bir ekibiz. 5 yılı aşkın süredir, onlarca mutluluğa ve markanın büyüme yolculuğuna eşlik ettik.
-                        </p>
-                        <p className="text-gray-400 text-lg mb-10 leading-relaxed">
-                            Sadece resim çekmiyor, markanızın geleceğini şekillendiren dijital varlıklar oluşturuyoruz. Modern estetik anlayışımız ve teknolojik donanımımızla her çekimde "mükemmeli" hedefliyoruz.
-                        </p>
+                    {/* Main Quote Text - Using !text-black and inline style for absolute guarantee */}
+                    <h2
+                        className="text-3xl md:text-[2.8rem] font-bold !text-black leading-[1.4] tracking-tight mb-20 px-4"
+                        style={{ color: '#000000' }}
+                    >
+                        "AJANS CTRL, markaların dijital dünyada sürdürülebilir büyüme elde etmesi için strateji, yaratıcılık ve teknoloji entegrasyonunu benimseyen profesyonel bir dijital ajanstır."
+                    </h2>
 
-                        <div className="grid grid-cols-2 gap-8">
-                            <div>
-                                <h4 className="text-3xl font-bold text-blue-400">100+</h4>
-                                <p className="text-sm text-gray-500 uppercase tracking-widest">Memnun Müşteri</p>
-                            </div>
-                            <div>
-                                <h4 className="text-3xl font-bold text-emerald-400">500+</h4>
-                                <p className="text-sm text-gray-500 uppercase tracking-widest">Tamamlanan Proje</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    {/* Vertical Red Line */}
+                    <div className="w-[1px] h-32 bg-[#A91D1D]/40"></div>
+                </motion.div>
             </div>
         </section>
     );

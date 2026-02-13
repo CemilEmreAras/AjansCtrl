@@ -1,19 +1,21 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import Services from '../components/Services';
 import About from '../components/About';
-import PhotoGallery from '../components/PhotoGallery';
-import Gallery from '../components/Gallery';
+import Hakkimizda from '../components/Hakkimizda';
+import Services from '../components/Services';
+import Partners from '../components/Partners';
+import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 const Home = () => {
     return (
-        <div className="pt-0">
+        <div className="scroll-smooth bg-black text-white selection:bg-primary selection:text-white">
             <Hero />
-            <Services />
             <About />
-            <PhotoGallery />
-            <Gallery />
+            <Hakkimizda />
+            <Services />
+            <Partners />
+            <Contact />
             <Footer />
         </div>
     );

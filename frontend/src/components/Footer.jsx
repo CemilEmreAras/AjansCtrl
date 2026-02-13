@@ -1,49 +1,58 @@
 import React from 'react';
-import { Camera, Instagram, Twitter, Linkedin, Youtube } from 'lucide-react';
+import { Instagram, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
     return (
-        <footer className="bg-black/40 border-t border-white/5 pt-16 pb-8">
-            <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                    <div className="col-span-1 md:col-span-2">
-                        <div className="flex items-center gap-2 text-2xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-                            <Camera className="text-blue-400" />
-                            <span>AjansCTRL</span>
+        <footer className="bg-black text-white pt-24 pb-12 border-t border-white/5">
+            <div className="container mx-auto px-12">
+                <div className="flex flex-col md:flex-row justify-between gap-16 mb-24">
+                    {/* Left: Logo & Description */}
+                    <div className="md:w-1/3">
+                        <div className="flex items-center gap-3 mb-8">
+                            <div className="w-4 h-4 bg-[#A91D1D]"></div>
+                            <h2 className="text-xl font-bold tracking-tight uppercase">AJANS CTRL</h2>
                         </div>
-                        <p className="text-gray-500 max-w-sm mb-6">
-                            Dijital dünyada markanızı zirveye taşımak için yaratıcılık ve stratejiyi birleştiriyoruz. Görsel hikaye anlatıcılığında yeni nesil çözümler.
+                        <p className="text-gray-500 text-sm leading-relaxed max-w-[280px]">
+                            Dijital dünyada iz bırakan markalar yaratıyoruz.
                         </p>
+                    </div>
+
+                    {/* Middle: Menu */}
+                    <div className="md:w-1/4">
+                        <h4 className="font-bold mb-8 text-sm">Menu</h4>
+                        <ul className="space-y-4">
+                            <li><a href="#about" className="text-gray-500 hover:text-white transition-colors text-sm">Biz Kimiz?</a></li>
+                            <li><a href="#services" className="text-gray-500 hover:text-white transition-colors text-sm">Hizmetler</a></li>
+                            <li><a href="#contact" className="text-gray-500 hover:text-white transition-colors text-sm">İletişim</a></li>
+                        </ul>
+                    </div>
+
+                    {/* Right: Sosyal */}
+                    <div className="md:w-1/4">
+                        <h4 className="font-bold mb-8 text-sm">Sosyal</h4>
                         <div className="flex gap-4">
-                            <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-blue-500 hover:text-white transition-all"><Instagram size={20} /></a>
-                            <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-blue-400 hover:text-white transition-all"><Twitter size={20} /></a>
-                            <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-blue-700 hover:text-white transition-all"><Linkedin size={20} /></a>
-                            <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-red-600 hover:text-white transition-all"><Youtube size={20} /></a>
+                            <a href="#" className="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center text-gray-400 hover:border-white/30 hover:text-white transition-all">
+                                <Instagram size={18} />
+                            </a>
+                            <a href="#" className="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center text-gray-400 hover:border-white/30 hover:text-white transition-all">
+                                <Linkedin size={18} />
+                            </a>
+                            <a href="#" className="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center text-gray-400 hover:border-white/30 hover:text-white transition-all">
+                                <Twitter size={18} />
+                            </a>
                         </div>
-                    </div>
-
-                    <div>
-                        <h4 className="text-lg font-bold mb-6">Hızlı Bağlantılar</h4>
-                        <ul className="space-y-4 text-gray-500">
-                            <li><a href="#" className="hover:text-blue-400 transition-colors">Ana Sayfa</a></li>
-                            <li><a href="#services" className="hover:text-blue-400 transition-colors">Hizmetler</a></li>
-                            <li><a href="#about" className="hover:text-blue-400 transition-colors">Hakkımızda</a></li>
-                            <li><a href="#portfolio" className="hover:text-blue-400 transition-colors">Portföy</a></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4 className="text-lg font-bold mb-6">İletişim</h4>
-                        <ul className="space-y-4 text-gray-500">
-                            <li>info@ajansctrl.com</li>
-                            <li>+90 (555) 123 45 67</li>
-                            <li>Levent, İstanbul, Türkiye</li>
-                        </ul>
                     </div>
                 </div>
 
-                <div className="border-t border-white/5 pt-8 text-center text-gray-600 text-sm">
-                    <p>© 2026 AjansCTRL. Tüm hakları saklıdır.</p>
+                {/* Bottom Bar */}
+                <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p className="text-[10px] text-gray-600 font-bold uppercase tracking-[0.2em]">
+                        © 2024 AJANS CTRL. TÜM HAKLARI SAKLIDIR.
+                    </p>
+                    <div className="flex gap-8 text-[10px] text-gray-600 font-bold uppercase tracking-[0.2em]">
+                        <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+                        <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
+                    </div>
                 </div>
             </div>
         </footer>
