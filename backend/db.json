@@ -1,0 +1,66 @@
+{
+  "portfolio": [
+    {
+      "id": 1770963377145,
+      "title": "Test Proje",
+      "client": "Test M",
+      "type": "image",
+      "url": "/uploads/1770963377117-test.png",
+      "createdAt": "2026-02-13T06:16:17.145Z"
+    },
+    {
+      "id": 1770963657278,
+      "title": "Test Proje 2",
+      "client": "Test Musteri 2",
+      "type": "image",
+      "url": "/uploads/1770963657274-test2.png",
+      "createdAt": "2026-02-13T06:20:57.278Z"
+    },
+    {
+      "id": 1770963711427,
+      "title": "deneme",
+      "client": "deneme",
+      "type": "image",
+      "url": "/uploads/1770963711256-Ekran Resmi 2025-03-15 11.15.02.png",
+      "createdAt": "2026-02-13T06:21:51.427Z"
+    },
+    {
+      "id": 1770965453222,
+      "title": "",
+      "client": "",
+      "type": "image",
+      "category": "photo",
+      "url": "/uploads/1770965453205-photo1.jpg",
+      "createdAt": "2026-02-13T06:50:53.222Z"
+    },
+    {
+      "id": 1770965595222,
+      "title": "",
+      "client": "",
+      "type": "image",
+      "category": "photo",
+      "url": "/uploads/1770965595204-photo2.jpg",
+      "createdAt": "2026-02-13T06:53:15.222Z"
+    },
+    {
+      "id": 1770969647964,
+      "title": "Katalog Foto 1",
+      "client": "M",
+      "type": "image",
+      "category": "photo",
+      "subcategory": "Katalog ",
+      "url": "/uploads/1770969647796-katalog.png",
+      "createdAt": "2026-02-13T08:00:47.964Z"
+    },
+    {
+      "id": 1770969748578,
+      "title": "Logo Tasarimi 1",
+      "client": "Musteri B",
+      "type": "image",
+      "category": "photo",
+      "subcategory": "Logo",
+      "url": "/uploads/1770969748525-logo.png",
+      "createdAt": "2026-02-13T08:02:28.578Z"
+    }
+  ]
+}
