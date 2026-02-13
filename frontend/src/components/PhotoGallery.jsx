@@ -13,7 +13,7 @@ const PhotoGallery = () => {
     useEffect(() => {
         const fetchPhotos = async () => {
             try {
-                const response = await axios.get('http://localhost:5001/api/portfolio');
+                const response = await axios.get('/api/portfolio');
                 const photoItems = response.data.filter(item => item.category === 'photo');
                 setPhotos(photoItems);
 
@@ -55,8 +55,8 @@ const PhotoGallery = () => {
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
                                 className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${activeCategory === cat
-                                        ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-500/20'
-                                        : 'bg-white/5 border-white/10 text-gray-400 hover:border-blue-500/50 hover:text-white'
+                                    ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-500/20'
+                                    : 'bg-white/5 border-white/10 text-gray-400 hover:border-blue-500/50 hover:text-white'
                                     }`}
                             >
                                 {cat}
@@ -83,7 +83,7 @@ const PhotoGallery = () => {
                                 onClick={() => setSelectedPhoto(photo)}
                             >
                                 <img
-                                    src={`http://localhost:5001${photo.url}`}
+                                    src={photo.url}
                                     alt={photo.title}
                                     className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
                                 />
@@ -134,7 +134,7 @@ const PhotoGallery = () => {
                             onClick={(e) => e.stopPropagation()}
                         >
                             <img
-                                src={`http://localhost:5001${selectedPhoto.url}`}
+                                src={selectedPhoto.url}
                                 alt={selectedPhoto.title}
                                 className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
                             />

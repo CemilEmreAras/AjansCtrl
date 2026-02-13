@@ -9,7 +9,7 @@ const Gallery = () => {
     useEffect(() => {
         const fetchPortfolio = async () => {
             try {
-                const response = await axios.get('http://localhost:5001/api/portfolio');
+                const response = await axios.get('/api/portfolio');
                 const filtered = response.data.filter(item => !item.category || item.category === 'project');
                 setPortfolio(filtered);
             } catch (error) {
@@ -47,13 +47,13 @@ const Gallery = () => {
                         >
                             {item.type === 'image' ? (
                                 <img
-                                    src={`http://localhost:5001${item.url}`}
+                                    src={item.url}
                                     alt={item.title}
                                     className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"
                                 />
                             ) : (
                                 <video
-                                    src={`http://localhost:5001${item.url}`}
+                                    src={item.url}
                                     className="w-full h-72 object-cover"
                                     controls
                                 />

@@ -16,18 +16,18 @@ const Admin = () => {
     const [uploading, setUploading] = useState(false);
     const [message, setMessage] = useState(null);
 
-    useEffect(() => {
-        fetchItems();
-    }, []);
-
     const fetchItems = async () => {
         try {
-            const response = await axios.get('http://localhost:5001/api/portfolio');
+            const response = await axios.get('/api/portfolio');
             setItems(response.data);
         } catch (error) {
             console.error('Error fetching items:', error);
         }
     };
+
+    useEffect(() => {
+        fetchItems();
+    }, []);
 
     const handleFileChange = (e) => {
         const selectedFile = e.target.files[0];
@@ -52,7 +52,7 @@ const Admin = () => {
         data.append('subcategory', formData.category === 'photo' ? formData.subcategory : '');
 
         try {
-            await axios.post('http://localhost:5001/api/upload', data);
+            await axios.post('/api/upload', data);
             setMessage({ type: 'success', text: 'Başarıyla yüklendi!' });
             setFile(null);
             setFormData({ title: '', client: '', type: 'image', category: 'project', subcategory: '' });
@@ -70,7 +70,7 @@ const Admin = () => {
     const handleDelete = async (id) => {
         if (!window.confirm('Bu öğeyi silmek istediğinize emin misiniz?')) return;
         try {
-            await axios.delete(`http://localhost:5001/api/portfolio/${id}`);
+            await axios.delete(`/api/portfolio/${id}`);
             fetchItems();
         } catch (error) {
             console.error('Delete error:', error);
@@ -197,7 +197,7 @@ const Admin = () => {
                             <div key={item.id} className="flex items-center gap-4 p-3 bg-black/20 rounded-xl border border-white/5 group">
                                 <div className="w-16 h-16 rounded-lg overflow-hidden bg-white/5 flex-shrink-0">
                                     {item.type === 'image' ? (
-                                        <img src={`http://localhost:5001${item.url}`} className="w-full h-full object-cover" alt="" />
+                                        <img src={item.url} className="w-full h-full object-cover" alt="" />
                                     ) : (
                                         <div className="w-full h-full flex items-center justify-center text-gray-500">
                                             <Film size={24} />
